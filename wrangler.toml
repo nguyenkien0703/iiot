@@ -1,0 +1,3 @@
+name = "fe-ttcs-deploy"
+command = "npx @cloudflare/next-on-pages@1"
+pages_build_output_dir = ".vercel/output/static"
