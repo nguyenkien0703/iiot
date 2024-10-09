@@ -1,3 +1,4 @@
+'use client'
 import { useAuthLogin } from '@/stores/auth/hook'
 import { useListLaptop } from '@/stores/laptop/hook'
 import { useEffect } from 'react'
