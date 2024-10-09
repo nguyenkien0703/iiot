@@ -1,3 +1,4 @@
+'use client'
 import { useParams, useRouter } from 'next/navigation'
 import { useLaptopDetail } from '@/stores/laptop/hook'
 import { useAuthLogin } from '@/stores/auth/hook'
