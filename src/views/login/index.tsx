@@ -11,10 +11,10 @@ const { Text } = Typography
 const Login = () => {
     return (
         <div className="flex max-h-full flex-col justify-between  gap-y-16">
-            <HeaderUser />
+            {/* <HeaderUser /> */}
             <ListBrand />
             <LoginContent />
-            <FooterUser />
+            {/* <FooterUser /> */}
         </div>
     )
 }

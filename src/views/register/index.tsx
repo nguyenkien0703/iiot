@@ -6,10 +6,10 @@ import ListBrand from '@/components/brand/listBrand'
 const Register = () => {
     return (
         <div className="flex max-h-full flex-col justify-between  gap-y-16">
-            <HeaderUser />
+            {/* <HeaderUser /> */}
             <ListBrand />
             <RegisterContent />
-            <FooterUser />
+            {/* <FooterUser /> */}
         </div>
     )
 }
