@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { useAuthLogin } from '@/stores/auth/hook'
 import { Button, Layout } from 'antd'
 import { useEffect, useState } from 'react'

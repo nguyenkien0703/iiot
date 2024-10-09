@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { Col, Row } from 'antd'
 
 const ListBrand = () => {

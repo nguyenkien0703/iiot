@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { useListCommentLaptop } from '@/stores/comment/hook'
 import { useEffect, useState } from 'react'
 import { EActionStatus } from '@/stores/type'

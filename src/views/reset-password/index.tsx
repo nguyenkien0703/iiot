@@ -1,10 +1,10 @@
-import { Button, Form, Input, notification, Typography } from 'antd'
-import { useRouter, useSearchParams } from 'next/navigation'
-import React, { useState } from 'react'
+'use client'
 import AuthLayout from '@/components/auth-layout'
-import Image from 'next/image'
-import { AxiosError } from 'axios'
 import servicePassword from '@/services/password'
+import { Button, Form, Input, notification, Typography } from 'antd'
+import { AxiosError } from 'axios'
+import { useRouter, useSearchParams } from 'next/navigation'
+import { useState } from 'react'
 
 const { Text } = Typography
 

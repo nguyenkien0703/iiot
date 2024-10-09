@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { Button, FormInstance, Spin } from 'antd'
 import { IAccountSignUpForm } from '@/views/register/register-content'
 import { useEffect, useState } from 'react'

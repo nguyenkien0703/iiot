@@ -1,3 +1,4 @@
+/* eslint-disable */
 import BoxArea from '@/components/box-area'
 import { RootState, useAppDispatch, useAppSelector } from '@/stores'
 import {

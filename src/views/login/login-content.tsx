@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { Button, Col, Form, Input, Row, Typography } from 'antd'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'

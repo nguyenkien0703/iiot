@@ -1,4 +1,4 @@
-'use client'
+
 
 import ResetPassword from '@/views/reset-password'
 
