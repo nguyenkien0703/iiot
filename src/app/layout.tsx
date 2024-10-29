@@ -6,10 +6,7 @@ import GlobalProvider from '@/global-provider'
 import WorkspaceLayout from '@/components/workspace-layout'
 
 const roboto = Roboto({ subsets: ['latin'], weight: ['400', '500', '700'] })
-export const metadata: Metadata = {
-    title: 'Laptop Application',
-    description: 'Laptop Application manage laptop in shop',
-}
+
 
 export default function RootLayout({
     children,
