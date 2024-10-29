@@ -7,6 +7,7 @@ import { ConfigProvider } from 'antd'
 import theme from '@/theme/theme-config'
 import StyledComponentsRegistry from '@/theme/ant-registry'
 import { useStore } from '@/stores'
+import { AntdRegistry } from '@ant-design/nextjs-registry'
 interface ProvidersProps {
     children: ReactNode
 }
@@ -16,7 +17,8 @@ const GlobalProvider: FC<ProvidersProps> = ({ children }) => {
     return (
         <ReduxProvider store={store}>
             <ConfigProvider theme={theme}>
-                <StyledComponentsRegistry> {children}</StyledComponentsRegistry>
+                {/* <StyledComponentsRegistry>{children}</StyledComponentsRegistry> */}
+                <AntdRegistry>{children}</AntdRegistry>
             </ConfigProvider>
         </ReduxProvider>
     )

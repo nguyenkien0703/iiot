@@ -1,4 +1,3 @@
-// thac mac 2
 'use client'
 
 import { PropsWithChildren, useState } from 'react'
