@@ -1,3 +1,4 @@
+'use client'
 import HeaderUser from '@/components/workspace-layout/header-user'
 import FooterUser from '@/components/workspace-layout/footer-user'
 import RegisterContent from '@/views/register/register-content'

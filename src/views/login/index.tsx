@@ -1,3 +1,4 @@
+'use client'
 import { Typography } from 'antd'
 import { useAuthLogin } from '@/stores/auth/hook'
 import { useRouter } from 'next/navigation'

@@ -1,3 +1,4 @@
+'use client'
 import { Typography } from 'antd'
 import AuthLayout from '@/components/auth-layout'
 import Image from 'next/image'

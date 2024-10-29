@@ -1,4 +1,4 @@
-'use client'
+
 
 import ForgotPassword from '@/views/forgot-password'
 
