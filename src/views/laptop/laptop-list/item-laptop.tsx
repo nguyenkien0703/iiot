@@ -4,6 +4,7 @@ import { useAuthLogin } from '@/stores/auth/hook'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 import { PlusOutlined, ShoppingCartOutlined } from '@ant-design/icons'
+import { convertSlugUrl } from '@/utils/convert-slug'
 const { Text } = Typography
 
 const ItemLaptop = ({ id, name, price, brand, image }: ILaptopItem) => {
@@ -11,7 +12,7 @@ const ItemLaptop = ({ id, name, price, brand, image }: ILaptopItem) => {
     const { authState } = useAuthLogin()
 
     const handleClickViewDetail = () => {
-        router.push(`/laptop/detail/${id}`)
+        router.push(`/laptop/detail/${convertSlugUrl(name)}-${id}.html`)
     }
     const handleAddToCart = () => {
         if (authState) {

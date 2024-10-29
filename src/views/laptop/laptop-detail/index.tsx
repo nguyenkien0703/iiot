@@ -12,9 +12,15 @@ import { ShoppingCartOutlined } from '@ant-design/icons'
 import CommentList from '@/views/laptop/laptop-detail/comment-list'
 
 const LaptopDetail = () => {
+
     const params = useParams()
+
     const router = useRouter()
-    const laptopId = Number(params.id)
+    console.log('params.id------', params.slug)
+    const temp = params.slug.toString().split('.html') ?? []
+    const temp1 = (temp[0]?.split('-') ?? []) as string[]
+    const laptopId = Number(temp1[temp1.length - 1]);
+    console.log('laptopId------', laptopId)
     const [{ laptop, status }, fetchLaptopDetail] = useLaptopDetail()
     const { authState } = useAuthLogin()
     useEffect(() => {
