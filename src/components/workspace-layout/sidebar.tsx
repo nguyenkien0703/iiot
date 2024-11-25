@@ -1,4 +1,4 @@
-import { useAuthLogin } from '@/stores/auth/hook'
+// import { useAuthLogin } from '@/stores/auth/hook'
 import { usePathname } from 'next/navigation'
 import { useRouter } from 'next/router'
 import { MenuProps, Menu, Layout, Button } from 'antd'
@@ -18,7 +18,7 @@ interface ISidebar {
 }
 type MenuItem = Required<MenuProps>['items'][number]
 const Sidebar = ({ isCollapsed, setIsCollapsed }: ISidebar) => {
-    const { authState } = useAuthLogin()
+    // const { authState } = useAuthLogin()
     const pathname = usePathname()
 
     const router = useRouter()
@@ -32,13 +32,13 @@ const Sidebar = ({ isCollapsed, setIsCollapsed }: ISidebar) => {
 
     const menuItems: MenuItem[] = SIDEBAR_ITEMS.map((sidebarItem) => {
         const { label, key, icon, role } = sidebarItem
-        if (role && checkRole(authState?.userData?.role, role)) {
-            return {
-                key,
-                icon: createElement(icon),
-                label: capitalizeFirstLetter(label),
-            }
-        }
+        // if (role && checkRole(authState?.userData?.role, role)) {
+        //     return {
+        //         key,
+        //         icon: createElement(icon),
+        //         label: capitalizeFirstLetter(label),
+        //     }
+        // }
         return null
     })
 

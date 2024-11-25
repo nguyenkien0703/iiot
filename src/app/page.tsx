@@ -1,4 +1,4 @@
-import LaptopList from "@/views/laptop";
+import Iot from "@/views/iot";
 
 // for data static
 // export const metadata: Metadata = {
@@ -41,7 +41,7 @@ export async function generateMetadata() {
 
 
 
-export default LaptopList;
+export default Iot;
 
 
 
