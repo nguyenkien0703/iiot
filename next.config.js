@@ -10,12 +10,13 @@ const nextConfig = {
                 headers: [
                     {
                         key: 'Content-Security-Policy',
-                        value: "upgrade-insecure-requests"
+                        value: "default-src * 'unsafe-inline' 'unsafe-eval'; img-src * data: blob: 'unsafe-inline'; connect-src * 'unsafe-inline';"
                     }
                 ]
             }
         ]
-    }
+    },
+    reactStrictMode: false,
 };
 
 module.exports = nextConfig;

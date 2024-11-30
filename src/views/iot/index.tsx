@@ -59,20 +59,53 @@ const TrafficLightDot = ({ color }: { color: 'red' | 'yellow' | 'green' }) => (
 export default function Home() {
 
     const [data, setData] = useState<TrafficLightData[]>([])
+    const [error, setError] = useState(null)
+    const [loading, setLoading] = useState(true)
 
     
     useEffect(()=> {
         console.log('fetching data')
         const fetchData = async () => {
-            const response = await serviceIot.getLatestAnalysis()
-            const dataArray = Array.isArray(response) ? response : [response]
-            setData(dataArray)
+            try {
+                setLoading(true)
+                setError(null)
+                console.log('API URL:', process.env.NEXT_PUBLIC_API_ENDPOINT)
+                const response = await serviceIot.getLatestAnalysis()
+                console.log('API Response:', response)
+                const dataArray = Array.isArray(response) ? response : [response]
+                setData(dataArray)
+            } catch (error) {
+                console.error('Detailed error:', {
+                    //@ts-ignore
+                    message: error.message,
+                    //@ts-ignore
+                    response: error.response?.data,
+                    //@ts-ignore
+                    status: error.response?.status,
+                    //@ts-ignore
+                    config: error.config
+                })
+                //@ts-ignore
+                setError(error.message)
+            } finally {
+                setLoading(false)
+            }
         }
+
         fetchData()
+        // Thêm interval để fetch data định kỳ
+        const interval = setInterval(fetchData, 30000) // fetch every 30 seconds
+        return () => clearInterval(interval)
     }, [])
-    console.log('daata lijne 79----', data)
+    // console.log('daata lijne 79----', data)
 
+    if (loading) {
+        return <div>Loading...</div>
+    }
 
+    if (error) {
+        return <div>Error: {error}</div>
+    }
 
     return (
         <Layout>
