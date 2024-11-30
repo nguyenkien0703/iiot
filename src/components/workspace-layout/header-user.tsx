@@ -17,14 +17,14 @@ const HeaderUser = () => {
                         <span className="text-xl font-bold text-black">Hệ Thống Đèn Giao Thông</span>
                     </div>
                 </Link>
-                <div className="flex gap-4">
+                {/* <div className="flex gap-4">
                     <Button type="primary" className="bg-green-600">
                         Báo Cáo
                     </Button>
                     <Button type="primary" className="bg-blue-600">
                         Điều Khiển
                     </Button>
-                </div>
+                </div> */}
             </div>
         </Layout.Header>
     )
