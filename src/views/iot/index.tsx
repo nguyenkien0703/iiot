@@ -94,7 +94,7 @@ export default function Home() {
 
         fetchData()
         // Thêm interval để fetch data định kỳ
-        const interval = setInterval(fetchData, 30000) // fetch every 30 seconds
+        const interval = setInterval(fetchData, 5000) // fetch every 30 seconds
         return () => clearInterval(interval)
     }, [])
     // console.log('daata lijne 79----', data)
