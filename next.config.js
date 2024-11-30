@@ -1,8 +1,21 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        domains: ['phucanhcdn.com','www.phucanh.vn'],
+        domains: ['phucanhcdn.com','www.phucanh.vn','203.162.10.102'],
     },
+    async headers() {
+        return [
+            {
+                source: '/:path*',
+                headers: [
+                    {
+                        key: 'Content-Security-Policy',
+                        value: "upgrade-insecure-requests"
+                    }
+                ]
+            }
+        ]
+    }
 };
 
 module.exports = nextConfig;
